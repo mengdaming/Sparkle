@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -1991,7 +1991,7 @@
 			attributes = {
 				CLASSPREFIX = SU;
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Sparkle Project";
 				TargetAttributes = {
 					5A5ADED6214EDE4900DF0099 = {
@@ -2030,7 +2030,7 @@
 				};
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Sparkle" */;
-			compatibilityVersion = "Xcode 6.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -2825,6 +2825,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 149B78631B7D3A0C00D7D62C /* ConfigCommonCoverage.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 			};
 			name = Coverage;
 		};
@@ -2834,7 +2835,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -2844,6 +2849,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941CB0D94A70100DD942E /* ConfigTestAppDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 			};
 			name = Coverage;
 		};
@@ -2858,6 +2864,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D06E8F20FD68D21005AE3F6 /* ConfigBinaryDeltaDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 			};
 			name = Coverage;
 		};
@@ -2865,6 +2872,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D30D94A70100DD942E /* ConfigRelaunchDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 			};
 			name = Coverage;
 		};
@@ -2892,7 +2900,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -2904,7 +2916,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -2913,6 +2929,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941CF0D94A70100DD942E /* ConfigCommonDebug.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 			};
 			name = Debug;
 		};
@@ -2920,7 +2937,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941CC0D94A70100DD942E /* ConfigCommonRelease.xcconfig */;
 			buildSettings = {
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -2928,6 +2947,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D30D94A70100DD942E /* ConfigRelaunchDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 			};
 			name = Debug;
 		};
@@ -2935,6 +2955,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D40D94A70100DD942E /* ConfigRelaunchRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 			};
 			name = Release;
 		};
@@ -2942,6 +2963,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB8F1AA214DA85900A1187F /* ConfigGenerateKeysDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2953,6 +2975,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB8F1AA214DA85900A1187F /* ConfigGenerateKeysDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -2963,6 +2986,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB8F1A9214DA85900A1187F /* ConfigGenerateKeysRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -2973,6 +2997,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7205C4351E12CA7000E370AE /* ConfigGenerateAppcastDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 			};
 			name = Debug;
@@ -2981,6 +3006,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7205C4351E12CA7000E370AE /* ConfigGenerateAppcastDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 			};
 			name = Coverage;
@@ -2989,6 +3015,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7205C4341E12C66D00E370AE /* ConfigGenerateAppcastRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 			};
 			name = Release;
@@ -2997,6 +3024,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB8F1AA214DA85900A1187F /* ConfigGenerateKeysDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -3008,6 +3036,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB8F1AA214DA85900A1187F /* ConfigGenerateKeysDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -3019,6 +3048,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB8F1A9214DA85900A1187F /* ConfigGenerateKeysRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -3030,6 +3060,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D06E8F20FD68D21005AE3F6 /* ConfigBinaryDeltaDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 			};
 			name = Debug;
 		};
@@ -3037,6 +3068,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D06E8F30FD68D21005AE3F6 /* ConfigBinaryDeltaRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 			};
 			name = Release;
 		};
@@ -3058,6 +3090,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941CB0D94A70100DD942E /* ConfigTestAppDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 			};
 			name = Debug;
 		};
@@ -3065,6 +3098,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D20D94A70100DD942E /* ConfigTestAppRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 			};
 			name = Release;
 		};
@@ -3072,6 +3106,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 722954C81D04E89500ECF9CA /* ConfigFileop.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -3081,6 +3116,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 722954C81D04E89500ECF9CA /* ConfigFileop.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -3090,6 +3126,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 722954C81D04E89500ECF9CA /* ConfigFileop.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
