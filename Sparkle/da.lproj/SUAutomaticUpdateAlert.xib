@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <development version="7000" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SUAutomaticUpdateAlert">
@@ -20,13 +20,13 @@
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="114" y="521" width="616" height="152"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <value key="minSize" type="size" width="511" height="152"/>
             <view key="contentView" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="616" height="152"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView id="7">
+                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7">
                         <rect key="frame" x="23" y="73" width="64" height="64"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="38"/>
@@ -34,7 +34,7 @@
                             <binding destination="-2" name="value" keyPath="applicationIcon" id="10"/>
                         </connections>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="8">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8">
                         <rect key="frame" x="105" y="120" width="497" height="17"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="39">
@@ -46,7 +46,7 @@
                             <binding destination="-2" name="value" keyPath="titleText" id="11"/>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="9">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9">
                         <rect key="frame" x="105" y="81" width="497" height="31"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="40">
@@ -58,9 +58,8 @@
                             <binding destination="-2" name="value" keyPath="descriptionText" id="14"/>
                         </connections>
                     </textField>
-                    <button verticalHuggingPriority="750" id="15">
-                        <rect key="frame" x="435" y="12" width="167" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="15">
+                        <rect key="frame" x="435" y="12" width="162" height="32"/>
                         <buttonCell key="cell" type="push" title="Installer og genstart" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="41">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -72,9 +71,8 @@ DQ
                             <action selector="installNow:" target="-2" id="33"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="16">
-                        <rect key="frame" x="306" y="12" width="129" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="16">
+                        <rect key="frame" x="289" y="12" width="146" height="32"/>
                         <buttonCell key="cell" type="push" title="Afslut og installer" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="42">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -86,9 +84,8 @@ Gw
                             <action selector="installLater:" target="-2" id="34"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="30">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="30">
                         <rect key="frame" x="102" y="12" width="116" height="32"/>
-                        <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Installer ikke" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="44">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -97,9 +94,8 @@ Gw
                             <action selector="doNotInstall:" target="-2" id="35"/>
                         </connections>
                     </button>
-                    <button id="17">
-                        <rect key="frame" x="105" y="58" width="619" height="18"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="17">
+                        <rect key="frame" x="105" y="58" width="300" height="18"/>
                         <buttonCell key="cell" type="check" title="Hent og installer opdateringer automatisk i fremtiden" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="43">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="smallSystem"/>
@@ -109,11 +105,25 @@ Gw
                         </connections>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="17" secondAttribute="trailing" constant="20" symbolic="YES" id="3vD-5Z-0in"/>
+                    <constraint firstAttribute="trailing" secondItem="16" secondAttribute="trailing" constant="187" id="5nW-Sf-5UT"/>
+                    <constraint firstItem="16" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="30" secondAttribute="trailing" constant="12" symbolic="YES" id="7Nm-E1-9xb"/>
+                    <constraint firstItem="30" firstAttribute="leading" secondItem="17" secondAttribute="leading" id="7Ze-cg-YE0"/>
+                    <constraint firstItem="30" firstAttribute="baseline" secondItem="16" secondAttribute="baseline" id="9K2-9K-bZ8"/>
+                    <constraint firstItem="30" firstAttribute="top" secondItem="17" secondAttribute="bottom" constant="21" id="9jV-24-2sX"/>
+                    <constraint firstItem="30" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="108" id="GqU-LT-Vl9"/>
+                    <constraint firstItem="30" firstAttribute="baseline" secondItem="15" secondAttribute="baseline" id="OeV-Yk-c90"/>
+                    <constraint firstItem="15" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="16" secondAttribute="trailing" symbolic="YES" id="bu1-bA-HRq"/>
+                    <constraint firstAttribute="trailing" secondItem="15" secondAttribute="trailing" constant="25" id="kr9-AL-awX"/>
+                    <constraint firstAttribute="bottom" secondItem="30" secondAttribute="bottom" constant="19" id="v8G-Wv-K6d"/>
+                </constraints>
             </view>
+            <point key="canvasLocation" x="139" y="147"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="18" userLabel="Shared Defaults"/>
     </objects>
     <resources>
-        <image name="NSApplicationIcon" width="128" height="128"/>
+        <image name="NSApplicationIcon" width="32" height="32"/>
     </resources>
 </document>
